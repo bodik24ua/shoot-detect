@@ -1,0 +1,99 @@
+#zero {
+    position: fixed;
+    width: 20%;
+    left: 10%;
+    top: 20%;
+}
+
+#one {
+    position: fixed;
+    width: 20%;
+    left: 70%;
+    top: 70%;
+}
+
+#two {
+    position: fixed;
+    width: 20%;
+    left: 70%;
+    top: 20%;
+}
+
+#three {
+    position: fixed;
+    width: 20%;
+    left: 10%;
+    top: 70%;
+}
+
+.N {
+    top: 5%;
+    position: absolute;
+    left: 50%;
+    color: rgb(80, 83, 247);
+    font-size: 40px;
+    box-shadow: 5px 8px 16px  #000;
+}
+
+
+
+.table-content {
+    padding: 3px;
+    display: block;
+    position: inherit;
+    /*background-color: rgba(144, 215, 145, 0.7);*/
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    overflow-y: scroll;
+}
+
+#datalist {
+}
+
+.gt {
+    padding: 20px;
+    background-color: #43a546;
+    text-align: center;
+    border-radius: 20px;
+}
+
+
+.table-dropdown:hover .table-content { display: block; height: 45vh;}
+
+.table-dropdown:hover .tablebtn {background-color: #3e8e41;}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    text-align: left;
+    width: 100%;
+    font-size: 25px;
+    border-collapse: collapse;
+}
+
+td {cursor: pointer;}
+
+
+body{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+
+.rotate{
+  transition:all .1s;
+}
+
+.centerPoint{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.arrow {
+    top: 30%;
+    font-size: 300px;
+    transform: rotate(150deg);
+    position: absolute;
+}
