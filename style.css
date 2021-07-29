@@ -54,26 +54,18 @@
 }
 
 
-
+/*
 .table-content {
     padding: 3px;
     display: block;
     position: inherit;
-    /*background-color: rgba(144, 215, 145, 0.7);*/
+    background-color: rgba(144, 215, 145, 0.7);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     overflow-y: scroll;
 }
 
 #datalist {
 }
-
-.gt {
-    padding: 20px;
-    background-color: #43a546;
-    text-align: center;
-    border-radius: 20px;
-}
-
 
 .table-dropdown:hover .table-content { display: block; height: 45vh;}
 
@@ -91,7 +83,15 @@ table {
 }
 
 td {cursor: pointer;}
+*/
 
+.gt {
+    padding: 20px;
+    background-color: #43a546;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px black;
+}
 
 body{
     overflow-y: hidden;
@@ -113,13 +113,18 @@ body{
 }
 
 .arrow {
+    opacity: .7;
+    background-size: 200px 200px;
+    background-image: url("arrow-left.svg");
     position: absolute;
-    top: 25%;
+    top: 35%;
     transform: rotate(90deg);
-    left: 50%;
+    left: 55%;
     display: block;
-    width: 25%;
+    width: 200px;
+    height: 200px;
     z-index: 1;
+    filter: drop-shadow( 1px 1px 5px rgba(255, 190, 0, .5));
 }
 
 p {
@@ -132,4 +137,5 @@ p {
     left: 50%;
     display: block;
     width: 25%;
+    transform: rotate(90deg);
 }
