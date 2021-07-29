@@ -5,7 +5,6 @@
     height:100%;
     background-color: #e7ffc0;
     font-size: 35px;
-    font-family: Arial;
 }
 
 .mainScreen{
@@ -106,6 +105,7 @@ body{
 }
 
 .centerPoint{
+    z-index: 2;
     color: gray;
     position: sticky;
     padding-left: 50%;
@@ -114,13 +114,22 @@ body{
 
 .arrow {
     position: absolute;
-    top: 35%;
+    top: 25%;
     transform: rotate(90deg);
     left: 50%;
     display: block;
     width: 25%;
+    z-index: 1;
 }
 
 p {
     margin-left: 5%;
+}
+
+.heli {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    display: block;
+    width: 25%;
 }
