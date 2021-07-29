@@ -1,34 +1,53 @@
+.properties{
+    float:left;
+    width:25vw;
+    min-height: 100px;
+    height:100%;
+    background-color: #e7ffc0;
+    font-size: 35px;
+    font-family: Arial;
+}
+
+.mainScreen{
+    float:left;
+    left: 100px;
+    width:75vw;
+    min-height:100vh;
+    background-color: #f6e0e1;
+}
+
 #zero {
-    position: fixed;
     width: 20%;
-    left: 10%;
+    padding-left: 10%;
     top: 20%;
+    position: sticky;
 }
 
 #one {
-    position: fixed;
     width: 20%;
-    left: 70%;
+    padding-left: 70%;
     top: 70%;
+    position: sticky;
 }
 
 #two {
-    position: fixed;
     width: 20%;
-    left: 70%;
+    padding-left: 70%;
     top: 20%;
+    position: sticky;
 }
 
 #three {
-    position: fixed;
     width: 20%;
-    left: 10%;
+    padding-left: 10%;
     top: 70%;
+    position: sticky;
 }
 
 .N {
+    width: min-content;
     top: 5%;
-    position: absolute;
+    position: relative;
     left: 50%;
     color: rgb(80, 83, 247);
     font-size: 40px;
@@ -76,7 +95,8 @@ td {cursor: pointer;}
 
 
 body{
-    display:flex;
+    overflow-y: hidden;
+    margin: 0;
     align-items:center;
     justify-content: center;
   }
@@ -86,14 +106,21 @@ body{
 }
 
 .centerPoint{
-    position: absolute;
-    left: 50%;
-    top: 50%;
+    color: gray;
+    position: sticky;
+    padding-left: 50%;
+    top: 45%;
 }
 
 .arrow {
-    top: 30%;
-    font-size: 300px;
-    transform: rotate(150deg);
     position: absolute;
+    top: 35%;
+    transform: rotate(90deg);
+    left: 50%;
+    display: block;
+    width: 25%;
+}
+
+p {
+    margin-left: 5%;
 }

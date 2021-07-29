@@ -90,11 +90,11 @@ $(document).ready(function () {
 
 ////// rotate compass////
 
-var compas=document.querySelector(".rotate");
+var compass=document.querySelector(".rotate");
 window.addEventListener("deviceorientation",function(e){
   
- // compas.style.transformOrigin=e.alpha;
-  compas.style.transform=`rotate(${e.alpha}deg)`;
+ // compass.style.transformOrigin=e.alpha;
+  compass.style.transform=`rotate(${e.alpha}deg)`;
   
 })
 
