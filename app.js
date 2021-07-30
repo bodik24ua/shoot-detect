@@ -81,7 +81,7 @@ $(document).ready(function () {
     //var obj = $.parseJSON(jsonData);
     $.each(jsonData, function () {
         div +=
-            '<tr><td>' + this['t0'] + '</td></tr>'
+            'time: ' + this['t0'] + '\n' + this['A0']
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch[1]'] + '</td><td>' + this['Frame_1'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_2'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_3'] + '</td></tr>'
@@ -95,7 +95,7 @@ $(document).ready(function () {
     //var obj = $.parseJSON(jsonData);
     $.each(jsonData, function () {
         div +=
-            '<tr><td>' + this['t1'] + '</td></tr>'
+            'time: ' + this['t1'] + '\n' + this['A1']
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch[1]'] + '</td><td>' + this['Frame_1'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_2'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_3'] + '</td></tr>'
@@ -109,7 +109,7 @@ $(document).ready(function () {
     //var obj = $.parseJSON(jsonData);
     $.each(jsonData, function () {
         div +=
-            '<tr><td>' + this['t2'] + '</td></tr>'
+             'time: ' + this['t2'] + '\n' + this['A2']
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch[1]'] + '</td><td>' + this['Frame_1'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_2'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_3'] + '</td></tr>'
@@ -123,7 +123,7 @@ $(document).ready(function () {
     //var obj = $.parseJSON(jsonData);
     $.each(jsonData, function () {
         div +=
-            '<tr><td>' + this['t3'] + '</td></tr>'
+            'time: ' + this['t3'] + '\n' + this['A3']
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch[1]'] + '</td><td>' + this['Frame_1'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_2'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_3'] + '</td></tr>'
@@ -142,5 +142,13 @@ window.addEventListener("deviceorientation", function (e) {
     compass.style.transform = `rotate(${e.alpha}deg)`;
 
 })
+
+function text(){
+    let zero = document.getElementById('zero');
+    let one =  document.getElementById('one');
+    let two = document.getElementById('two');
+    let three =  document.getElementById('three');
+    $( "div.zero" ).text();
+}
 
 /////////

@@ -90,6 +90,7 @@ td {cursor: pointer;}
 */
 
 .gt {
+    font-size: 25px;
     padding: 20px;
     background-color: #43a546;
     text-align: center;
@@ -117,13 +118,12 @@ body{
 }
 
 .arrow {
-    opacity: .7;
     background-size: 500px;
-    background-image: url("arrow-left.svg");
-    position: absolute;
+    background-image: url("arrow-long.svg");
+    position: fixed;
     top: 15%;
     transform: rotate(90deg);
-    left: 45%;
+    right: 18.1vw;
     display: block;
     width: 500px;
     height: 500px;
