@@ -1,3 +1,16 @@
+var wsAddress = document.location.host;
+wsAddress = wsAddress.substring(0, wsAddress.length - 4);
+wsAddress = "ws://" + wsAddress + "6789";
+var websocket = new WebSocket(wsAddress);
+
+var count = 0;
+
+websocket.onmessage = function (event) {
+    console.log(count, event.data);
+    count++;
+};
+
+
 $(document).ready(function () {
 
     const jsonData = [{
