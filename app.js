@@ -1,5 +1,23 @@
 $(document).ready(function () {
-    var jsonData = [{
+
+    const jsonData = [{
+        "t0": 1.1,
+        "t1": 1.2,
+        "t2": 1.2,
+        "t3": 1.3,
+        "A0": 1,
+        "A1": 1,
+        "A2": 1,
+        "A3": 4,
+        "phi": -3.1415926535897922,
+        "A": 1.75,
+        "tetta": 1.544278067369098
+    }
+    ]
+
+    ////////////////////////////////////////////////////////////////////////
+
+    /*var jsonData = [{
             "Shot": 1,
             "Ch_0": 1644,
             "Max_0": 4331,
@@ -16,7 +34,9 @@ $(document).ready(function () {
         }
 
 
-    ];
+    ];*/
+
+
     /*var table =
         '<table><thead><th class="gt">Shot</th><th class="gt">Channel</th><th class="gt">Frame</th></thead><tbody>';
     //var obj = $.parseJSON(jsonData);
@@ -31,12 +51,37 @@ $(document).ready(function () {
     table += '</tbody></table>';
     document.getElementById("one").innerHTML = table;*/
 
+    let div_phi = '<div class="div_phi">';
+    $.each(jsonData, function (){
+        div_phi +=
+           'φ = ' + this['phi'];
+    });
+     div_phi += '</div>';
+     document.getElementById('phi').innerHTML = div_phi;
+
+    let div_a = '<div class="div_a">';
+    $.each(jsonData, function (){
+        div_a +=
+            'A = ' + this['A'];
+    });
+    div_a += '</div>';
+    document.getElementById('a').innerHTML = div_a;
+
+    let div_o = '<div class="div_o">';
+    $.each(jsonData, function (){
+        div_o +=
+            'θ = ' + this['tetta'];
+    });
+    div_o += '</div>';
+    document.getElementById('o').innerHTML = div_o;
+
+
     var div =
         '<div class="gt">';
     //var obj = $.parseJSON(jsonData);
     $.each(jsonData, function () {
         div +=
-            '<tr><td>' + this['Ch_0'] + '</td></tr>'
+            '<tr><td>' + this['t0'] + '</td></tr>'
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch[1]'] + '</td><td>' + this['Frame_1'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_2'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_3'] + '</td></tr>'
@@ -50,7 +95,7 @@ $(document).ready(function () {
     //var obj = $.parseJSON(jsonData);
     $.each(jsonData, function () {
         div +=
-            '<tr><td>' + this['Ch_1'] + '</td></tr>'
+            '<tr><td>' + this['t1'] + '</td></tr>'
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch[1]'] + '</td><td>' + this['Frame_1'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_2'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_3'] + '</td></tr>'
@@ -64,7 +109,7 @@ $(document).ready(function () {
     //var obj = $.parseJSON(jsonData);
     $.each(jsonData, function () {
         div +=
-            '<tr><td>' + this['Ch_2'] + '</td></tr>'
+            '<tr><td>' + this['t2'] + '</td></tr>'
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch[1]'] + '</td><td>' + this['Frame_1'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_2'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_3'] + '</td></tr>'
@@ -78,7 +123,7 @@ $(document).ready(function () {
     //var obj = $.parseJSON(jsonData);
     $.each(jsonData, function () {
         div +=
-            '<tr><td>' + this['Ch_3'] + '</td></tr>'
+            '<tr><td>' + this['t3'] + '</td></tr>'
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch[1]'] + '</td><td>' + this['Frame_1'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_2'] + '</td></tr>' +
         //'<tr><td>' + this['Shot'] + '</td><td>' + this['Ch'] + '</td><td>' + this['Frame_3'] + '</td></tr>'
@@ -90,12 +135,12 @@ $(document).ready(function () {
 
 ////// rotate compass////
 
-var compass=document.querySelector(".rotate");
-window.addEventListener("deviceorientation",function(e){
-  
- // compass.style.transformOrigin=e.alpha;
-  compass.style.transform=`rotate(${e.alpha}deg)`;
-  
+var compass = document.querySelector(".rotate");
+window.addEventListener("deviceorientation", function (e) {
+
+    // compass.style.transformOrigin=e.alpha;
+    compass.style.transform = `rotate(${e.alpha}deg)`;
+
 })
 
 /////////

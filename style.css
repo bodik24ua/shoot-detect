@@ -1,6 +1,10 @@
 .properties{
+    padding-top: 1vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-bottom: 5vw;
     float:left;
-    width:25vw;
+    width:30vw;
     min-height: 100px;
     height:100%;
     background-color: #e7ffc0;
@@ -10,9 +14,9 @@
 .mainScreen{
     float:left;
     left: 100px;
-    width:75vw;
+    width:65vw;
     min-height:100vh;
-    background-color: #f6e0e1;
+    background-color: #fff;
 }
 
 #zero {
@@ -114,15 +118,15 @@ body{
 
 .arrow {
     opacity: .7;
-    background-size: 200px 200px;
+    background-size: 500px;
     background-image: url("arrow-left.svg");
     position: absolute;
-    top: 35%;
+    top: 15%;
     transform: rotate(90deg);
-    left: 55%;
+    left: 45%;
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
     z-index: 1;
     filter: drop-shadow( 1px 1px 5px rgba(255, 190, 0, .5));
 }
@@ -134,7 +138,7 @@ p {
 .heli {
     position: absolute;
     top: 35%;
-    left: 50%;
+    left: 52%;
     display: block;
     width: 25%;
     transform: rotate(90deg);
