@@ -119,7 +119,7 @@ body{
 
 .arrow {
     background-size: 500px;
-    background-image: url("arrow-long.svg");
+    background-image: url("arrow-left.svg");
     position: fixed;
     top: 15%;
     transform: rotate(90deg);
