@@ -50,7 +50,7 @@ function showDataInJSON(msgData) {
 
     //
 
-    let kg = "deg)"
+    let kilograms = "rotate(" + (Math.round((180 / Math.PI) * jsonDataParsed.phi * 100) / 100) + "deg)"
 
-    document.getElementById("arrow").style.transform = "rotate(" + (Math.round((180 / Math.PI) * jsonDataParsed.tetta * 100) / 100) + kg;
+    document.getElementById("arrow").style.transform =  kilograms;
 }

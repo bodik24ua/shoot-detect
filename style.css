@@ -12,9 +12,10 @@
 }
 
 .mainScreen{
+    position: absolute;
     float:left;
-    left: 100px;
-    width:65vw;
+    left: 35vw;
+    width: 65vw;
     min-height:100vh;
     background-color: #fff;
 }
@@ -118,15 +119,12 @@ body{
 }
 
 .arrow {
-    background-size: 500px;
-    background-image: url("arrow-left.svg");
-    position: fixed;
-    top: 15%;
-
-    right: 18.1vw;
+    position: absolute;
+    top: 35%;
+    left: 52%;
     display: block;
-    width: 500px;
-    height: 500px;
+    width: 25%;
+    transform: rotate(90deg);
     z-index: 1;
     filter: drop-shadow( 1px 1px 5px rgba(255, 190, 0, .5));
 }
