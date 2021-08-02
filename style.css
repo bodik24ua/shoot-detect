@@ -23,7 +23,7 @@
     width: 20%;
     padding-left: 10%;
     top: 20%;
-    position: sticky;
+    position: absolute;
 }
 
 #one {
@@ -122,7 +122,7 @@ body{
     background-image: url("arrow-left.svg");
     position: fixed;
     top: 15%;
-    transform: rotate(90deg);
+
     right: 18.1vw;
     display: block;
     width: 500px;

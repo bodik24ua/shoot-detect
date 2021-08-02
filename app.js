@@ -6,7 +6,7 @@ var websocket = new WebSocket(wsAddress);
 var count = 0;
 
 websocket.onmessage = function (event) {
-    console.log(count, event.data);
+    //console.log(count, event.data);
     count++;
     showDataInJSON(event.data);
 };
@@ -47,4 +47,10 @@ function showDataInJSON(msgData) {
     div_s3 += 't3: ' + jsonDataParsed.t3 + '<br>' + 'A3: ' + jsonDataParsed.A3;
     div_s3 += '</div>';
     document.getElementById("three").innerHTML = div_s3;
+
+    //
+
+    let kg = "deg)"
+
+    document.getElementById("arrow").style.transform = "rotate(" + (Math.round((180 / Math.PI) * jsonDataParsed.tetta * 100) / 100) + kg;
 }
