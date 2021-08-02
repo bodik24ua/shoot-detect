@@ -11,6 +11,11 @@ websocket.onmessage = function (event) {
     showDataInJSON(event.data);
 };
 
+
+function myRound(number) {
+    return (Math.round(number * 1000) / 1000);
+}
+
 function showDataInJSON(msgData) {
     let jsonDataParsed = JSON.parse(msgData);
     let div_phi = '<div class="div_phi">';
@@ -29,22 +34,22 @@ function showDataInJSON(msgData) {
     document.getElementById('o').innerHTML = div_tetta;
 
     let div_s0 =  '<div class="gt">';
-    div_s0 += 't0: ' + jsonDataParsed.t0 + '<br>' + 'A0: ' + jsonDataParsed.A0;
+    div_s0 += 't0: ' + myRound(jsonDataParsed.t0) + '<br>' + 'A0: ' + myRound(jsonDataParsed.A0);
     div_s0 += '</div>';
     document.getElementById("zero").innerHTML = div_s0;
 
     let div_s1 =  '<div class="gt">';
-    div_s1 += 't1: ' + jsonDataParsed.t1 + '<br>' + 'A1: ' + jsonDataParsed.A1;
+    div_s1 += 't1: ' + myRound(jsonDataParsed.t1) + '<br>' + 'A1: ' + myRound(jsonDataParsed.A1);
     div_s1 += '</div>';
     document.getElementById("one").innerHTML = div_s1;
 
     let div_s2 =  '<div class="gt">';
-    div_s2 += 't2: ' + jsonDataParsed.t2 + '<br>' + 'A2: ' + jsonDataParsed.A2;
+    div_s2 += 't2: ' + myRound(jsonDataParsed.t2) + '<br>' + 'A2: ' + myRound(jsonDataParsed.A2);
     div_s2 += '</div>';
     document.getElementById("two").innerHTML = div_s2;
 
     let div_s3 =  '<div class="gt">';
-    div_s3 += 't3: ' + jsonDataParsed.t3 + '<br>' + 'A3: ' + jsonDataParsed.A3;
+    div_s3 += 't3: ' + myRound(jsonDataParsed.t3) + '<br>' + 'A3: ' + myRound(jsonDataParsed.A3);
     div_s3 += '</div>';
     document.getElementById("three").innerHTML = div_s3;
 
