@@ -121,7 +121,7 @@ body{
 .arrow {
     position: absolute;
     left: 26%;
-    top: 26%;
+    top: 230px;
     display: block;
     width: 50%;
     transform: rotate(90deg);
