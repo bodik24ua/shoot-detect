@@ -115,29 +115,28 @@ body{
     color: gray;
     position: sticky;
     padding-left: 50%;
-    top: 45%;
+    top: 50%;
 }
 
 .arrow {
     position: absolute;
-    top: 35%;
-    left: 52%;
+    left: 26%;
+    top: 26%;
     display: block;
-    width: 25%;
+    width: 50%;
     transform: rotate(90deg);
     z-index: 1;
     filter: drop-shadow( 1px 1px 5px rgba(255, 190, 0, .5));
 }
 
-p {
-    margin-left: 5%;
-}
-
 .heli {
     position: absolute;
-    top: 35%;
-    left: 52%;
+    top: 46%;
+    left: 38%;
     display: block;
     width: 25%;
     transform: rotate(90deg);
+}
+p {
+    margin-left: 5%;
 }
