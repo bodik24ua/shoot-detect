@@ -65,18 +65,26 @@ function showDataInJSON(msgData) {
         //set block to work
         console.log("turnAlarm");
         document.getElementById("alarmScr").style.display="block";
+        document.getElementById("alarmTxt").style.display="block";
         audio.play();
     }
 
-    setTimeout(turnAlarm(), 3000)
+    setTimeout(turnAlarm(), 1000)
 
-    function back(){
-        console.log("back");
-        document.getElementById("alarmScr").style.display="none";
-        audio.stop();
+    function pauseAudio(){
+        console.log("pauseAudio");
+        audio.pause();
     }
 
-    setTimeout(back, 5000);
+    setTimeout(pauseAudio, 3000);
+
+    function back() {
+        console.log("back");
+        document.getElementById("alarmScr").style.display = "none";
+        document.getElementById("alarmTxt").style.display = "none";
+    }
+
+    setTimeout(back, 6000);
 
 }
 

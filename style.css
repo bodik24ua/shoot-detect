@@ -4,7 +4,7 @@
     padding-right: 1.5vw;
     padding-bottom: 5vw;
     float:left;
-    width:30vw;
+    width:25vw;
     min-height: 100px;
     height:100%;
     background-color: #e7ffc0;
@@ -14,8 +14,8 @@
 .mainScreen{
     position: absolute;
     float:left;
-    left: 35vw;
-    width: 65vw;
+    left: 30vw;
+    width: 70vw;
     min-height:100vh;
     background-color: #fff;
 }
@@ -49,8 +49,9 @@
 }
 
 .N {
+    z-index: 5;
     width: min-content;
-    top: 5%;
+    margin-top: 3%;
     position: relative;
     left: 49%;
     color: rgb(80, 83, 247);
@@ -120,10 +121,10 @@ body{
 
 .arrow {
     position: absolute;
-    left: 26%;
-    top: 230px;
+    left: 19.3vw;
+    top: 25vh;
     display: block;
-    width: 50%;
+    width: 33vw;
     transform: rotate(90deg);
     z-index: 1;
     filter: drop-shadow( 1px 1px 5px rgba(255, 190, 0, .5));
@@ -142,10 +143,31 @@ p {
 }
 
 .alarmScr {
+    border: #ff8500 solid;
+    border-left-width: 3vw;
+    border-right-width: 3vw;
+    border-top-width: 5vh;
+    border-bottom-width: 5vh;
     display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #ff0000;
+    position: absolute;
+    left: 28vw;
+    width: 66vw;
+    min-height: 90vh;
     z-index: 3;
+    overflow: hidden;
+}
+
+h1 {
+    z-index: 4;
+    position: absolute;
+    bottom: 1vw;
+    left: 25.5vw;
+    color: #ff0000;
+    background-color: black;
+    text-align: center;
+    font-size: 3vw;
+}
+
+#alarmTxt{
+    display: none;
 }
