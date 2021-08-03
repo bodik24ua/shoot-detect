@@ -140,3 +140,12 @@ body{
 p {
     margin-left: 5%;
 }
+
+.alarmScr {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #ff0000;
+    z-index: 3;
+}

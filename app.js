@@ -5,12 +5,14 @@ var websocket = new WebSocket(wsAddress);
 
 var count = 0;
 
+let audio = new Audio('https://upload.wikimedia.org/wikipedia/commons/3/36/Air_raid_alarm_in_China.ogg');
+
 websocket.onmessage = function (event) {
     //console.log(count, event.data);
-    count++;
+    //count++;
     showDataInJSON(event.data);
-};
 
+};
 
 function myRound(number) {
     return (Math.round(number * 1000) / 1000);
@@ -57,5 +59,27 @@ function showDataInJSON(msgData) {
 
     let kilograms = "rotate(" + (Math.round((180 / Math.PI) * jsonDataParsed.phi * 100) / 100) + "deg)"
 
-    document.getElementById("arrow").style.transform =  kilograms;
+    document.getElementById("arrow").style.transform = kilograms;
+
+    function turnAlarm(){
+        //set block to work
+        console.log("turnAlarm");
+        document.getElementById("alarmScr").style.display="block";
+        audio.play();
+    }
+
+    setTimeout(turnAlarm(), 3000)
+
+    function back(){
+        console.log("back");
+        document.getElementById("alarmScr").style.display="none";
+        audio.stop();
+    }
+
+    setTimeout(back, 5000);
+
 }
+
+
+
+
