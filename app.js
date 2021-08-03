@@ -5,7 +5,7 @@ var websocket = new WebSocket(wsAddress);
 
 var count = 0;
 
-let audio = new Audio('https://upload.wikimedia.org/wikipedia/commons/3/36/Air_raid_alarm_in_China.ogg');
+let audio = new Audio('alarm.mp3');
 
 websocket.onmessage = function (event) {
     //console.log(count, event.data);
@@ -84,7 +84,7 @@ function showDataInJSON(msgData) {
         document.getElementById("alarmTxt").style.display = "none";
     }
 
-    setTimeout(back, 6000);
+    setTimeout(back, 10000);
 
 }
 
