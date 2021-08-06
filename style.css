@@ -4,7 +4,7 @@
     padding-right: 1.5vw;
     padding-bottom: 5vw;
     float:left;
-    width:25vw;
+    width:15vw;
     min-height: 100px;
     height:100%;
     background-color: #e7ffc0;
@@ -14,8 +14,8 @@
 .mainScreen{
     position: absolute;
     float:left;
-    left: 30vw;
-    width: 70vw;
+    left: 20vw;
+    width: 80vw;
     min-height:100vh;
     background-color: #fff;
 }
@@ -59,45 +59,13 @@
     box-shadow: 5px 8px 16px  #000;
 }
 
-
-/*
-.table-content {
-    padding: 3px;
-    display: block;
-    position: inherit;
-    background-color: rgba(144, 215, 145, 0.7);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    overflow-y: scroll;
-}
-
-#datalist {
-}
-
-.table-dropdown:hover .table-content { display: block; height: 45vh;}
-
-.table-dropdown:hover .tablebtn {background-color: #3e8e41;}
-
-table, td, th {
-    border: 1px solid black;
-}
-
-table {
-    text-align: left;
-    width: 100%;
-    font-size: 25px;
-    border-collapse: collapse;
-}
-
-td {cursor: pointer;}
-*/
-
 .gt {
     font-size: 25px;
-    padding: 20px;
+    padding: 50px;
     background-color: #43a546;
     text-align: center;
-    border-radius: 20px;
-    box-shadow: 2px 2px 8px black;
+    border-radius: 30%;
+    box-shadow: 3px 3px 8px black;
 }
 
 body{
@@ -121,11 +89,10 @@ body{
 
 .arrow {
     position: absolute;
-    left: 19.3vw;
+    left: 23.5vw;
     top: 25vh;
     display: block;
     width: 33vw;
-    transform: rotate(90deg);
     z-index: 1;
     filter: drop-shadow( 1px 1px 5px rgba(255, 190, 0, .5));
 }
@@ -150,8 +117,8 @@ p {
     border-bottom-width: 5vh;
     display: none;
     position: absolute;
-    left: 28vw;
-    width: 66vw;
+    left: 18vw;
+    width: 76vw;
     min-height: 90vh;
     z-index: 3;
     overflow: hidden;

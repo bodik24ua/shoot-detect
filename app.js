@@ -61,6 +61,10 @@ function showDataInJSON(msgData) {
 
     document.getElementById("arrow").style.transform = kilograms;
 
+    turnAlarm();
+    setTimeout(pauseAudio, 3000);
+    setTimeout(back, 10000);
+
     function turnAlarm(){
         //set block to work
         console.log("turnAlarm");
@@ -69,14 +73,10 @@ function showDataInJSON(msgData) {
         audio.play();
     }
 
-    setTimeout(turnAlarm(), 1000)
-
     function pauseAudio(){
         console.log("pauseAudio");
         audio.pause();
     }
-
-    setTimeout(pauseAudio, 3000);
 
     function back() {
         console.log("back");
@@ -84,10 +84,6 @@ function showDataInJSON(msgData) {
         document.getElementById("alarmTxt").style.display = "none";
     }
 
-    setTimeout(back, 10000);
-
 }
-
-
 
 
