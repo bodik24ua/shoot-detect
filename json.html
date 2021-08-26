@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Read and Parse JSON String in jQuery | Example</title>
+    <style type="text/css">
+        table {
+            border: 1px solid #777;
+            border-collapse: collapse;
+        }
+
+        table tr th,
+        table tr td {
+            border: 1px solid #777;
+        }
+    </style>
+</head>
+<body>
+<div id="datalist"></div>
+
+<script src="components/scripts/lib/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var data = '[{"d":100, "v":0.000000, "h":0.000000}, {"d":200, "v":0.300000, "h":0.000000}, {"d":300, "v":0.900000, "h":0.000000}, {"d":400, "v":1.700000, "h":0.000000}, {"d":500, "v":2.800000, "h":0.000000}, {"d":600, "v":3.900000, "h":0.000000}, {"d":700, "v":5.000000, "h":0.000000}, {"d":800, "v":6.100000, "h":0.000000}, {"d":900, "v":7.200000, "h":0.000000}, {"d":1000, "v":8.800000, "h":0.000000}, {"d":1100, "v":9.800000, "h":0.000000}, {"d":1200, "v":11.800000, "h":0.000000}, {"d":1300, "v":13.800000, "h":0.000000}, {"d":1400, "v":15.800000, "h":0.000000}, {"d":1500, "v":17.800000, "h":0.000000}, {"d":1600, "v":20.800000, "h":0.000000}, {"d":1700, "v":22.800000, "h":0.000000}, {"d":1800, "v":25.800000, "h":0.000000}, {"d":1900, "v":28.800000, "h":0.000000}, {"d":2000, "v":31.800000, "h":0.000000}]';
+        var table = '<table><thead><th>Distance</th><th>V</th><th>H</th></thead><tbody>';
+        var obj = $.parseJSON(data);
+        $.each(obj, function() {
+            table += '<tr><td>' + this['d'] + '</td><td>' + this['v'] + '</td><td>' + this['h'] + '</td>  </tr>';
+        });
+        table += '</tbody></table>';
+        document.getElementById("datalist").innerHTML = table;
+    });
+</script>
+</body>
+</html>

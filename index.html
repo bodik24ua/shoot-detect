@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  xmlns="http://www.w3.org/1999/html"-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>REAR SIGHT</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="components/styles/bootstrap-icons/bootstrap-icons.css">
+    <link rel="manifest" href="manifest.json"/>
+    <script src="components/scripts/lib/jquery.min.js"></script>
+    <script src="components/scripts/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/scripts/lib/adapter-latest.js"></script>
+    <script src='components/scripts/lib/joy.js'></script>
+
+    <link rel="stylesheet" type="text/css" href="components/styles/app_view.css"/>
+    <link rel="stylesheet" type="text/css" href="components/styles/jquery-ui.css">
+    <link rel="icon" href="components/images/icon.png"/>
+    <link href="components/styles/ShareTech-Regular.ttf" rel="font/ttf">
+    <meta name="viewport" content="width=device-width">
+    <!--<script src="components/scripts/lib/interact.min.js"></script>-->
+    <script src="components/scripts/lib/TweenLite.min.js"></script>
+    <script src="components/scripts/lib/CSSPlugin.min.js"></script>
+    <script src="components/scripts/lib/EasePack.min.js"></script>
+</head>
+
+<body>
+
+<!-- <div id="xy_sms">X: 0 </br> Y: 0</div> -->
+
+<div class="rotate">
+    ⚠️ ATTENTION! ⛔️ <br> You cannot use the service at this screen position!
+</div>
+
+<div id="shoot" class="shoot">
+    <img style="width: 30%; margin-top: 20%; margin-left: auto; margin-right:auto; display: block; align-self: center;"
+         src="components/images/glass.png">
+</div>
+
+<div id="leftcol" class="leftcol">
+    <div class="mode_button" id="shootText"></div>Ca
+    <!-- Navigation -->
+    <div class="b-nav">
+        <li>
+            <div onmouseover="onMouseOverButtonTable()" onmouseleave="onMouseLeaveButtonTable()" class="buttons-pref">
+                <button title="Балістичний калькулятор" class="mode_button table-dropdown"><i class="bi bi-table"></i>
+                    <div class="table-content">
+                        <div style="width: 100%; height: 43px; position: absolute; margin-top: -3px;">
+                            <div style="width: 100%; height: 100%; background-color: rgba(0,0,0, .5); position: relative;">
+                                <div id="ck-button">
+                                    <label for="table_check">
+                                        <input onclick="table_check()" id="table_check" type="checkbox"><span id="changeText">Змінити</span>
+
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="idFireCorrectionStatus" style="margin-top: 38px; display: block;"></div>
+                        <!--<div class="gray-table"></div>-->
+                        <div><div id="datalist"></div></div>
+                    </div>
+                </button>
+            </div>
+
+            <div class="buttons-swap-reg">
+                <!--<div class="in-row-one">-->
+                <button title="Пристрілка" class="mode_button" id="id_mode_button_reg_fire" onclick="onClickButtonRegFire();">
+                    <i class="bi bi-arrows-move"></i></button>
+                <!--<div class="in-row-two">-->
+
+                <!--<div class="in-row-three">-->
+                <!--<button class="mode_button" id="id_mode_button_fire" onclick="fire();"><i class="bi bi-circle-fill"></i>
+                </button>-->
+            </div>
+
+            <div class="buttons-swap-reg">
+            <button title="Змінити камеру" class="mode_button" id="id_mode_button_swap_streams" onclick="onClickButtonSwapStreams()">
+                <i class="bi bi-arrow-repeat"></i></button>
+            </div>
+
+            <div class="buttons-pref">
+                <!--<div class="dropdown">-->
+                <button title="Налаштуваття насиченості" class="mode_button gear"><i class="bi bi-sliders"></i>
+                    <div class="dropdown-content">
+                        <div class="slidecontainer" style="z-index: 1;">
+                            <!--<div class="fx-slider">
+                                <label for="br">Brightness</label><br>
+                                <input id="br" name="br" type="range" min="5" max="30" value="10" onchange="streamChangeColor()">
+                            </div>
+                            <div class="fx-slider">
+                                <label for="ct">Contrast</label><br>
+                                <input id="ct" name="ct" type="range" min="5" max="30" value="10" onchange="streamChangeColor()">
+                            </div>-->
+                            <div class="fx-slider">
+                                <label for="st">Насиченість</label> <br>
+                                <input id="st" name="ct" type="range" min="5" max="30" value="10"
+                                       onchange="streamChangeColor()">
+                            </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </li>
+    </div>
+
+    <!-- Burger-Icon -->
+    <div class="b-container">
+        <div class="b-menu">
+            <div class="b-bun b-bun--top"></div>
+            <div class="b-bun b-bun--mid"></div>
+            <div class="b-bun b-bun--bottom"></div>
+        </div>
+
+        <!-- Burger-Brand -->
+        <a href="#" class="b-brand"></a>
+    </div>
+
+    <div class="distInfo">
+        <div id="blockDistInfo" class="blockDistInfo">
+            <div class="redLineDist"></div>
+            <div id="distanceWritePrev3Info" class="textDist3info"></div>
+            <div id="distanceWritePrev2Info" class="textDist2info"></div>
+            <div id="distanceWritePrevInfo" class="textDistinfo"></div>
+            <div id="distanceWriteInfo" class="textMiddleDistinfo"></div>
+            <div id="distanceWriteNextInfo" class="textDistinfo"></div>
+            <div id="distanceWriteNext2Info" class="textDist2info"></div>
+            <div id="distanceWriteNext3Info" class="textDist3info"></div>
+        </div>
+    </div>
+
+    <section id="content">
+        <div id="range"></div>
+    </section>
+
+
+</div>
+
+<div onmouseover="mouseOnDistInfo()" onmouseover="streamZoom()" onmouseleave="streamZoomOut()" id="scrollableElement" class="area_video scrollableElement">
+    <video onmouseover="streamZoom()" onmouseleave="streamZoomOut()" id="stream" autoplay playsinline>
+        Your browser does not support video
+    </video>
+</div>
+
+<!--<div class="rightcol">
+
+
+    <div class="main">
+        <div class="row-one">
+            <div class="col-one-one">
+                &lt;!&ndash; <form>
+                    <h2 class="header-top">REAR SIGHT MANAGER</h2>
+                </form> &ndash;&gt;
+                <br>
+
+                <div class="rowR-joystick">
+                    <div class="colRlCamera">
+                        &lt;!&ndash;<div class="joyRCameraDivClass" id="joyRlCamera"></div>&ndash;&gt;
+                    </div>
+                </div>
+
+
+                <div class="row-zoom-buttons">
+                    <div class="row-zoom-plus-button">
+                        <form class="formZoomPlus">
+                            <input class="buttonZoomPlus" id="idButtonZoomPlus" type="button" value="+"
+                                   onclick="onClickButtonZoomPlus()">
+                        </form>
+                    </div>
+                    <div class="row-zoom-minus-button">
+                        <form class="formZoomMinus">
+                            <input class="buttonZoomMinus" id="idButtonZoomMinus" type="button" value="-"
+                                   onclick="onClickButtonZoomMinus()">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row-joystick">
+                    <div class="colCtrlCamera">
+                        &lt;!&ndash;<div class="joyCtrlCameraDivClass" id="joyCtrlCamera"></div>&ndash;&gt;
+                    </div>
+                </div>
+            </div>
+            <div class="col-one-two">
+
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<!--
+<div id="joystick_red">
+    <div class="draggable" id="knob"></div>
+</div>
+-->
+
+<!--<script src="/components/scripts/pwa-handler.js"></script>-->
+<script src='components/scripts/app.js'></script>
+<script src='components/scripts/keyboardMouseKeys.js'></script>
+<script src='components/scripts/WSADKeys.js'></script>
+<script src="components/scripts/coordinates.js"></script>
+<script src="components/scripts/themes.js"></script>
+</body>
+
+</html>
